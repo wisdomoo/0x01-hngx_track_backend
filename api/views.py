@@ -5,8 +5,8 @@ from django.utils import timezone
 from api.models import Info
 
 def get_info(request):
-    slack_name = request.GET.get('slack_name')
-    track = request.GET.get('track')
+   # slack_name = request.GET.get('slack_name')
+  #  track = request.GET.get('track')
 
     current_day = timezone.now().strftime('%A')
 
@@ -14,10 +14,10 @@ def get_info(request):
     info.save()
 
     response_data = {
-        "slack_name": slack_name,
+        "slack_name": 'slack_name',
         "current_day": current_day,
         "utc_time": timezone.now().strftime('%Y-%m-%dT%H:%M:%SZ'),
-        "track": track,
+        "track": 'track',
         "github_file_url": "https://github.com/wisdomoo/hngx-track_backend/blob/master/endpoint/api/views.py",
         "github_repo_url": "https://github.com/wisdomoo/hngx-track_backend",
         "status_code": 200
