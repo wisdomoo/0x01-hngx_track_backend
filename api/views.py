@@ -5,8 +5,8 @@ from django.utils import timezone
 from api.models import Info
 
 def get_info(request):
-   # slack_name = request.GET.get('slack_name')
-  #  track = request.GET.get('track')
+    slack_name = request.GET.get('slack_name')
+    track = request.GET.get('track')
 
     current_day = timezone.now().strftime('%A')
 
